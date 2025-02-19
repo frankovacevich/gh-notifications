@@ -34,20 +34,20 @@ gh auth login
 3. Clone the Repository
 
 ```
-git clone https://github.com/YOUR_GITHUB_USERNAME/github-tray-notifier.git
-cd github-tray-notifier
+git clone https://github.com/YOUR_GITHUB_USERNAME/gh-notifications-notifier.git
+cd gh-notifications-notifier
 ```
 
 4. Make the Script Executable
 
 ```
-chmod +x github-tray.sh
+chmod +x gh-notifications.sh
 ```
 
 5. Test the script
 
 ```
-./github-tray.sh
+./gh-notifications.sh
 ```
 
 6. Auto-Start on Login
@@ -58,7 +58,7 @@ Open a terminal and run:
 
 ```
 mkdir -p ~/.config/autostart
-nano ~/.config/autostart/github-tray.desktop
+nano ~/.config/autostart/gh-notifications.desktop
 ```
 
 Paste the following content:
@@ -66,7 +66,7 @@ Paste the following content:
 ```
 [Desktop Entry]
 Type=Application
-Exec=/path/to/github-tray.sh
+Exec=/path/to/gh-notifications.sh
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
@@ -75,7 +75,7 @@ Name=GitHub Notifications
 
 Save the file (CTRL+X, then Y, then Enter).
 
-Replace `/path/to/github-tray.sh` with the actual path.
+Replace `/path/to/gh-notifications.sh` with the actual path.
 
 Now, the script will automatically start on login.
 
@@ -84,11 +84,11 @@ Now, the script will automatically start on login.
 To stop the script from running:
 
 ```
-pkill -f github-tray.sh
+pkill -f gh-notifications.sh
 ```
 
 To disable auto-start, delete the autostart file:
 
 ```
-rm ~/.config/autostart/github-tray.desktop
+rm ~/.config/autostart/gh-notifications.desktop
 ```
